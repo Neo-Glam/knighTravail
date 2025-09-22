@@ -68,7 +68,7 @@ class Board {
         const newPath = [...path, [nx, ny]];
 
         if (nx === dest_x && ny === dest_y) {
-          return newPath;
+          return `you made it in ${newPath.length - 1} moves !` + ` path : ${newPath.join("||")}`;
         }
         queue.push(newPath);
       }
@@ -78,4 +78,4 @@ class Board {
 }
 
 const plateau = new Board();
-console.log("bob");
+console.log(plateau.knightMoves([0,0],[4,4]));
